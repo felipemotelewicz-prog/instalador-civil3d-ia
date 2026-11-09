@@ -1,20 +1,25 @@
-# Instalador: Claude + AutoCAD / Civil 3D
+# Instaladores: Claude + Civil 3D (beta)
 
-Liga o **Claude Desktop** no **AutoCAD completo ou Civil 3D** (não funciona no AutoCAD LT).
+Dois instaladores, sem login e sem precisar de administrador.
 
-## Como instalar
+## 1. Completo (recomendado): Civil 3D de verdade
+Liga o Claude nos **objetos do Civil 3D**: superfícies, alinhamentos, perfis, corredores, seções, superelevação, redes de tubo (gravidade e pressão), pontos COGO, lotes, terraplenagem, hidrologia, quantitativos, pranchas e checagens de qualidade (180+ ações).
 
-1. Baixe o instalador: **[Instalar-Civil3D-IA.bat](https://github.com/felipemotelewicz-prog/instalador-civil3d-ia/releases/latest/download/Instalar-Civil3D-IA.bat)**
-2. Dê dois cliques no arquivo. Se o Windows mostrar um aviso azul, clique em **Mais informações → Executar assim mesmo**.
-3. Siga a tela. Quando ele pedir, **abra o Civil 3D com um desenho** e aperte Enter.
-4. No Claude, escreva: `use o system_status do autocad`. Tem que aparecer `connected: true`.
+**[Baixar Instalar-Civil3D-IA-Completo.bat](https://github.com/felipemotelewicz-prog/instalador-civil3d-ia/releases/download/v2.0.0/Instalar-Civil3D-IA-Completo.bat)**
 
-## O que ele faz
+- Precisa do **Civil 3D 2025, 2026 ou 2027** (validado pelo autor no 2026).
+- Feche o Civil 3D, dê dois cliques no instalador e siga a tela.
+- Ele baixa o que faltar (Node.js e .NET SDK, só para esta conexão), monta o plugin para o seu Civil 3D e configura o Claude.
+- Ao abrir o Civil 3D, se aparecer aviso de segurança do `Civil3DMcpPlugin`, clique em **Sempre carregar**.
+- Teste no Claude: `use o civil3d_health`. No Civil 3D: comando `C3DMCPSTATUS`.
 
-- Confere se o AutoCAD / Civil 3D está instalado
-- Instala o Python se faltar
-- Instala a conexão (`autocad-mcp-pro`)
-- Grava a configuração do Claude (faz cópia de segurança e mantém as outras conexões)
-- Reabre o Claude
+## 2. Simples: só desenho comum
+Linhas, layers, cotas, textos, pranchas e PDF (funciona em qualquer AutoCAD completo ou Civil 3D).
 
-Deu erro? Mande o arquivo `%TEMP%\instalador-civil3d-ia.log` para o suporte.
+**[Baixar Instalar-Civil3D-IA.bat](https://github.com/felipemotelewicz-prog/instalador-civil3d-ia/releases/download/v1.0.0/Instalar-Civil3D-IA.bat)**
+
+## Deu erro?
+Mande o arquivo `%TEMP%\instalador-civil3d-ia.log` para o suporte.
+
+## Créditos
+A conexão completa usa o [Civil3D-mcp](https://github.com/SimsUDS/Civil3D-mcp) de Steven Bouldin (licença MIT, incluída no pacote). O modo simples usa o [autocad-mcp-pro](https://pypi.org/project/autocad-mcp-pro/).
