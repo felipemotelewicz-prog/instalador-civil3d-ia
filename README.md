@@ -1,6 +1,18 @@
-# Instaladores: Claude + Civil 3D (beta)
+# AutoCivil: Claude + Civil 3D (beta)
 
-Dois instaladores, sem login e sem precisar de administrador.
+## ⬇️ Baixar
+**[Baixar AutoCivil.exe](https://github.com/felipemotelewicz-prog/instalador-civil3d-ia/releases/download/v2.1.0/AutoCivil.exe)**
+
+Sem login e sem precisar de administrador.
+
+1. Salve seus desenhos e **feche o Civil 3D**.
+2. Abra o **AutoCivil.exe**. Se o Windows mostrar um aviso azul, clique em **Mais informações → Executar assim mesmo**. Se o navegador avisar do download, clique em **Manter**.
+3. Escolha **Completo** (recomendado) ou **Simples** e clique em **Instalar**.
+4. Quando ele pedir, abra o Civil 3D com um desenho e clique em OK. Ele abre o Claude.
+
+---
+
+## Versões em .bat (alternativa)
 
 ## 1. Completo (recomendado): Civil 3D de verdade
 Liga o Claude nos **objetos do Civil 3D**: superfícies, alinhamentos, perfis, corredores, seções, superelevação, redes de tubo (gravidade e pressão), pontos COGO, lotes, terraplenagem, hidrologia, quantitativos, pranchas e checagens de qualidade (180+ ações).

@@ -167,6 +167,7 @@ Ok "Pastas liberadas para abrir/salvar desenhos: $($permitidas -join ' | ')"
 # ---------- 6. Abrir de novo ----------
 Passo 6 "Quase pronto"
 Write-Host ""
+if ($env:C3D_GUI -eq '1') { Write-Host "##CLAUDE##$caminhoClaude" } else {
 Write-Host "   1) ABRA O CIVIL 3D com um desenho qualquer." -ForegroundColor White
 Write-Host "   2) Depois aperte ENTER aqui para eu abrir o Claude." -ForegroundColor White
 Read-Host "   ENTER para continuar" | Out-Null
@@ -177,6 +178,7 @@ try {
     else { Aviso "Abra o Claude pelo menu Iniciar." }
 } catch { Aviso "Abra o Claude pelo menu Iniciar." }
 
+}
 Write-Host ""
 Write-Host "=============================================" -ForegroundColor Green
 Write-Host "   PRONTO!" -ForegroundColor Green

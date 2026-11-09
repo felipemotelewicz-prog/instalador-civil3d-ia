@@ -97,6 +97,7 @@ if (-not $validos) { Falha "Nenhum Civil 3D compativel (2025, 2026 ou 2027)." }
 
 # Civil 3D precisa estar fechado para trocar o plugin
 while (Get-Process acad -ErrorAction SilentlyContinue) {
+    if ($env:C3D_GUI -eq '1') { Falha "O Civil 3D esta aberto. Feche o programa e clique em Instalar de novo." }
     Aviso "O Civil 3D / AutoCAD esta aberto. Salve seus desenhos e FECHE o programa."
     Read-Host "   Depois de fechar, aperte ENTER" | Out-Null
 }
@@ -274,6 +275,7 @@ if ($gravou -eq 0) { Falha "Nao consegui gravar nenhuma configuracao do Claude."
 # ---------- 8. Abrir ----------
 Passo 8 "Quase pronto"
 Write-Host ""
+if ($env:C3D_GUI -eq '1') { Write-Host "##CLAUDE##$caminhoClaude" } else {
 Write-Host "   1) ABRA O CIVIL 3D com um desenho." -ForegroundColor White
 Write-Host "      Se aparecer um aviso de seguranca sobre 'Civil3DMcpPlugin', clique em 'Sempre carregar'." -ForegroundColor White
 Write-Host "      Na linha de comando deve aparecer: Civil3D MCP plugin initialized on port $PORTA" -ForegroundColor White
@@ -286,6 +288,7 @@ try {
     else { Aviso "Abra o Claude pelo menu Iniciar." }
 } catch { Aviso "Abra o Claude pelo menu Iniciar." }
 
+}
 Write-Host ""
 Write-Host "=====================================================" -ForegroundColor Green
 Write-Host "   PRONTO!" -ForegroundColor Green
