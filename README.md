@@ -1,14 +1,15 @@
 # AutoCivil: Claude + Civil 3D (beta)
 
 ## ⬇️ Baixar
-**[Baixar AutoCivil.exe](https://github.com/felipemotelewicz-prog/instalador-civil3d-ia/releases/download/v2.1.0/AutoCivil.exe)**
+**[Baixar AutoCivil.exe](https://github.com/felipemotelewicz-prog/instalador-civil3d-ia/releases/download/v3.0.0/AutoCivil.exe)**
 
 Sem login e sem precisar de administrador.
 
 1. Salve seus desenhos e **feche o Civil 3D**.
 2. Abra o **AutoCivil.exe**. Se o Windows mostrar um aviso azul, clique em **Mais informações → Executar assim mesmo**. Se o navegador avisar do download, clique em **Manter**.
-3. Escolha **Completo** (recomendado) ou **Simples** e clique em **Instalar**.
-4. Quando ele pedir, abra o Civil 3D com um desenho e clique em OK. Ele abre o Claude.
+3. Confira a lista "Neste computador" e clique em **Instalar** (leva de 3 a 6 minutos na primeira vez).
+4. Na tela final: abra o Civil 3D, clique em **Reiniciar o Claude** e cole o pedido de teste.
+5. Deu erro? Abra o AutoCivil pelo menu Iniciar e clique em **Está dando erro?**: ele confere cada peça e conserta sozinho.
 
 ---
 
